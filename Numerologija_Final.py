@@ -1,6 +1,6 @@
 # -*- coding: cp1251 -*-
 
-# словарь в котором ключи это числовой вес букв, а значения эти списки букв с этим весом
+# dict в котором ключи это числовой вес букв, а значения эти списки букв с этим весом
 letters_value_dict = {
     'а': 1, 'и': 1, 'с': 1, 'ъ': 1, 'a': 1, 'j': 1, 's': 1,
     'б': 2, 'й': 2, 'т': 2, 'ы': 2, 'b': 2, 'k': 2, 't': 2,
@@ -10,7 +10,7 @@ letters_value_dict = {
     'е': 6, 'н': 6, 'ц': 6, 'я': 6, 'f': 6, 'o': 6, 'x': 6,
     'ё': 7, 'о': 7, 'ч': 7, 'g': 7, 'p': 7, 'y': 7,
     'ж': 8, 'п': 8, 'ш': 8, 'h': 8, 'q': 8, 'z': 8,
-    'з': 9, 'р': 9, 'щ': 9, 'i': 9, 'r': 9,
+    'з': 9, 'р': 9, 'щ': 9, 'i': 9, 'r': 9
 }
 
 
@@ -32,6 +32,8 @@ final_number = 0
 
 # идем по буквам имени делая их маленьким, что бы не
 # путался регистр и ищем их в словаре, если нашли прибавляем число к сумме
+
+
 for letters in name:
     try:
         final_number += letters_value_dict[letters.lower()]
@@ -39,4 +41,37 @@ for letters in name:
         print(e)
 
 # выводим на печать результат передавая промежуточный результат в функцию для пересчета
-print(f"Ваше число: {sum_digits(final_number)}")
+final_digit = sum_digits(final_number)
+print(f"Ваше число: {final_digit}")
+
+def bonus():
+    if final_digit == 1:
+        f = open("list_1.txt", "r", encoding="utf-8")
+        print(f.read())
+    if final_digit == 2:
+        f = open("list_2.txt", "r", encoding="utf-8")
+        print(f.read())
+    if final_digit == 3:
+        f = open("list_3.txt", "r", encoding="utf-8")
+        print(f.read())
+    if final_digit == 4:
+        f = open("list_4.txt", "r", encoding="utf-8")
+        print(f.read())
+    if final_digit == 5:
+        f = open("list_5.txt", "r", encoding="utf-8")
+        print(f.read())
+    if final_digit == 6:
+        f = open("list_6.txt", "r", encoding="utf-8")
+        print(f.read())
+    if final_digit == 7:
+        f = open("list_7.txt", "r", encoding="utf-8")
+        print(f.read())
+    if final_digit == 8:
+        f = open("list_8.txt", "r", encoding="utf-8")
+        print(f.read())
+    if final_digit == 9:
+        f = open("list_9.txt", "r", encoding="utf-8")
+        print(f.read())
+pass
+
+bonus()
